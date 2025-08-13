@@ -6,16 +6,15 @@
 //
 
 import SwiftUI
+import shared
 
 struct ContentView: View {
+    private let systemInfo = SystemInfo()
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text(systemInfo.getInfo())
+                .padding()
         }
-        .padding()
     }
 }
 

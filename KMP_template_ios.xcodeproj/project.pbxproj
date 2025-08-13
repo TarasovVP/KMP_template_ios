@@ -11,6 +11,7 @@
 		C83E30022E3D385F00BE1DFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E30012E3D385F00BE1DFA /* ContentView.swift */; };
 		C83E30042E3D386000BE1DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83E30032E3D386000BE1DFA /* Assets.xcassets */; };
 		C83E30082E3D386000BE1DFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83E30072E3D386000BE1DFA /* Preview Assets.xcassets */; };
+		C83E30142E4CFADF00BE1DFA /* shared.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83E30132E4CFADF00BE1DFA /* shared.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,8 @@
 		C83E30032E3D386000BE1DFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C83E30052E3D386000BE1DFA /* KMP_template_ios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KMP_template_ios.entitlements; sourceTree = "<group>"; };
 		C83E30072E3D386000BE1DFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C83E300F2E3D4F9500BE1DFA /* shared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = shared.framework; path = ../../Downloads/releaseFramework/shared.framework; sourceTree = "<group>"; };
+		C83E30132E4CFADF00BE1DFA /* shared.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = shared.xcframework; path = ../../Downloads/shared.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C83E30142E4CFADF00BE1DFA /* shared.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +42,7 @@
 			children = (
 				C83E2FFE2E3D385F00BE1DFA /* KMP_template_ios */,
 				C83E2FFD2E3D385F00BE1DFA /* Products */,
+				C83E300E2E3D4F9400BE1DFA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +72,15 @@
 				C83E30072E3D386000BE1DFA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C83E300E2E3D4F9400BE1DFA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C83E30132E4CFADF00BE1DFA /* shared.xcframework */,
+				C83E300F2E3D4F9500BE1DFA /* shared.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +325,7 @@
 				DEVELOPMENT_TEAM = 37VPN352DG;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/Frameworks/shared/build/XCFrameworks/release";
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
