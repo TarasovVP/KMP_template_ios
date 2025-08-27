@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		869F6D42DE6C82AD2E506AE2 /* Pods_KMP_template_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6DCCA9BB1241D7EDF49C5B /* Pods_KMP_template_ios.framework */; };
 		C83E30002E3D385F00BE1DFA /* KMP_template_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E2FFF2E3D385F00BE1DFA /* KMP_template_iosApp.swift */; };
 		C83E30022E3D385F00BE1DFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E30012E3D385F00BE1DFA /* ContentView.swift */; };
 		C83E30042E3D386000BE1DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83E30032E3D386000BE1DFA /* Assets.xcassets */; };
 		C83E30082E3D386000BE1DFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83E30072E3D386000BE1DFA /* Preview Assets.xcassets */; };
-		C83E30142E4CFADF00BE1DFA /* shared.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = C83E30132E4CFADF00BE1DFA /* shared.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F6E8662944A873E69938B9E /* Pods-KMP_template_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMP_template_ios.debug.xcconfig"; path = "Target Support Files/Pods-KMP_template_ios/Pods-KMP_template_ios.debug.xcconfig"; sourceTree = "<group>"; };
+		8F6DCCA9BB1241D7EDF49C5B /* Pods_KMP_template_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMP_template_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCD8152BB3B6CF419AF0B364 /* Pods-KMP_template_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMP_template_ios.release.xcconfig"; path = "Target Support Files/Pods-KMP_template_ios/Pods-KMP_template_ios.release.xcconfig"; sourceTree = "<group>"; };
 		C83E2FFC2E3D385F00BE1DFA /* KMP_template_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KMP_template_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C83E2FFF2E3D385F00BE1DFA /* KMP_template_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMP_template_iosApp.swift; sourceTree = "<group>"; };
 		C83E30012E3D385F00BE1DFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -30,19 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C83E30142E4CFADF00BE1DFA /* shared.xcframework in Frameworks */,
+				869F6D42DE6C82AD2E506AE2 /* Pods_KMP_template_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47998C8E8320124D4CAAC9D0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F6E8662944A873E69938B9E /* Pods-KMP_template_ios.debug.xcconfig */,
+				BCD8152BB3B6CF419AF0B364 /* Pods-KMP_template_ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C83E2FF32E3D385F00BE1DFA = {
 			isa = PBXGroup;
 			children = (
 				C83E2FFE2E3D385F00BE1DFA /* KMP_template_ios */,
 				C83E2FFD2E3D385F00BE1DFA /* Products */,
 				C83E300E2E3D4F9400BE1DFA /* Frameworks */,
+				47998C8E8320124D4CAAC9D0 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +92,7 @@
 			children = (
 				C83E30132E4CFADF00BE1DFA /* shared.xcframework */,
 				C83E300F2E3D4F9500BE1DFA /* shared.framework */,
+				8F6DCCA9BB1241D7EDF49C5B /* Pods_KMP_template_ios.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,6 +104,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C83E300B2E3D386000BE1DFA /* Build configuration list for PBXNativeTarget "KMP_template_ios" */;
 			buildPhases = (
+				31D048A8900D0A2FBFCBAFB6 /* [CP] Check Pods Manifest.lock */,
 				C83E2FF82E3D385F00BE1DFA /* Sources */,
 				C83E2FF92E3D385F00BE1DFA /* Frameworks */,
 				C83E2FFA2E3D385F00BE1DFA /* Resources */,
@@ -147,6 +162,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31D048A8900D0A2FBFCBAFB6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMP_template_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C83E2FF82E3D385F00BE1DFA /* Sources */ = {
@@ -277,6 +317,7 @@
 		};
 		C83E300C2E3D386000BE1DFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F6E8662944A873E69938B9E /* Pods-KMP_template_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -315,6 +356,7 @@
 		};
 		C83E300D2E3D386000BE1DFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BCD8152BB3B6CF419AF0B364 /* Pods-KMP_template_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
