@@ -3,15 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		869F6D42DE6C82AD2E506AE2 /* Pods_KMP_template_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F6DCCA9BB1241D7EDF49C5B /* Pods_KMP_template_ios.framework */; };
 		C83E30002E3D385F00BE1DFA /* KMP_template_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E2FFF2E3D385F00BE1DFA /* KMP_template_iosApp.swift */; };
 		C83E30022E3D385F00BE1DFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83E30012E3D385F00BE1DFA /* ContentView.swift */; };
 		C83E30042E3D386000BE1DFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83E30032E3D386000BE1DFA /* Assets.xcassets */; };
 		C83E30082E3D386000BE1DFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C83E30072E3D386000BE1DFA /* Preview Assets.xcassets */; };
+		C8A0BCE62E6F415A00ADA8A6 /* shared in Frameworks */ = {isa = PBXBuildFile; productRef = C8A0BCE52E6F415A00ADA8A6 /* shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				869F6D42DE6C82AD2E506AE2 /* Pods_KMP_template_ios.framework in Frameworks */,
+				C8A0BCE62E6F415A00ADA8A6 /* shared in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +52,7 @@
 		C83E2FF32E3D385F00BE1DFA = {
 			isa = PBXGroup;
 			children = (
+				C8A0BCDC2E6F3DC400ADA8A6 /* Packages */,
 				C83E2FFE2E3D385F00BE1DFA /* KMP_template_ios */,
 				C83E2FFD2E3D385F00BE1DFA /* Products */,
 				C83E300E2E3D4F9400BE1DFA /* Frameworks */,
@@ -97,6 +98,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C8A0BCDC2E6F3DC400ADA8A6 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,6 +122,9 @@
 			dependencies = (
 			);
 			name = KMP_template_ios;
+			packageProductDependencies = (
+				C8A0BCE52E6F415A00ADA8A6 /* shared */,
+			);
 			productName = KMP_template_ios;
 			productReference = C83E2FFC2E3D385F00BE1DFA /* KMP_template_ios.app */;
 			productType = "com.apple.product-type.application";
@@ -142,6 +153,9 @@
 				Base,
 			);
 			mainGroup = C83E2FF32E3D385F00BE1DFA;
+			packageReferences = (
+				C8A0BCE42E6F415A00ADA8A6 /* XCLocalSwiftPackageReference "Packages/KMPTemplate" */,
+			);
 			productRefGroup = C83E2FFD2E3D385F00BE1DFA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -416,6 +430,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		C8A0BCE42E6F415A00ADA8A6 /* XCLocalSwiftPackageReference "Packages/KMPTemplate" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/KMPTemplate;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C8A0BCE52E6F415A00ADA8A6 /* shared */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = shared;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C83E2FF42E3D385F00BE1DFA /* Project object */;
 }
