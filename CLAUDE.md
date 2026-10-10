@@ -1,18 +1,15 @@
 # KMP_template_ios
 
-A SwiftUI app. shared is used as `import shared` (`SystemInfo().getInfo()` in `ContentView.swift`).
-Edit only inside this directory.
+A SwiftUI app that uses the Kotlin Multiplatform module `shared` (`import shared`).
 
-## How shared arrives
-The prebuilt binary `Packages/KMPTemplate/shared.xcframework` is attached as a local SPM package (`Package.swift`, `.binaryTarget`). CocoaPods is gone.
-Do not touch `Packages/KMPTemplate/.shared-rev` or the XCFramework itself: the orchestrator updates them through `propagate.sh`.
-Look up the shared API in `Packages/KMPTemplate/shared.xcframework/ios-arm64/shared.framework/Headers/shared.h`; if the symbol you need is missing, that is a task for shared-agent - put it in `NOT_DONE`.
+## Where shared comes from
+A prebuilt `Packages/KMPTemplate/shared.xcframework`, attached as a local SPM package (`Package.swift`, `.binaryTarget`). There is no CocoaPods.
+The framework is built in `KMP_template_shared` and copied here by `scripts/propagate.sh` of the `kmp-agents` harness;
+`Packages/KMPTemplate/.shared-rev` records which shared sources it was built from.
 
-## Build (from ~/kmp-agents)
-`xcodebuild -project KMP_template_ios/KMP_template_ios.xcodeproj -scheme KMP_template_ios -destination 'generic/platform=iOS Simulator' -derivedDataPath /tmp/kmp-ios-dd CODE_SIGNING_ALLOWED=NO build`
-(Release: add `-configuration Release`.) There is no test target.
-
-## Note
-Kotlin/Native strings are stored in the binary as UTF-16LE: plain `strings` does not find them.
-
-Canary: IOS-UGJ9ZC
+## Build
+```
+xcodebuild -project KMP_template_ios.xcodeproj -scheme KMP_template_ios \
+  -destination 'generic/platform=iOS Simulator' CODE_SIGNING_ALLOWED=NO build
+```
+Or open `KMP_template_ios.xcodeproj` in Xcode. There is no test target.
