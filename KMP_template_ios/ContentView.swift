@@ -14,6 +14,7 @@ struct ContentView: View {
         VStack {
             Text(systemInfo.getInfo())
                 .padding()
+            Text("Device: \(systemInfo.getDeviceModel())")
         }
     }
 }

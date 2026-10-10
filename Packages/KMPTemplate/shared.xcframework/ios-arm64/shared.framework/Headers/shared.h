@@ -169,6 +169,7 @@ __attribute__((swift_name("SystemInfo")))
 @interface SharedSystemInfo : SharedBase
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
+- (NSString *)getDeviceModel __attribute__((swift_name("getDeviceModel()")));
 - (NSString *)getInfo __attribute__((swift_name("getInfo()")));
 @end
 
