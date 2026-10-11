@@ -15,6 +15,7 @@ struct ContentView: View {
             Text(systemInfo.getInfo())
                 .padding()
             Text("Device: \(systemInfo.getDeviceModel())")
+            Text("OS: \(systemInfo.getOsVersion())")
         }
     }
 }

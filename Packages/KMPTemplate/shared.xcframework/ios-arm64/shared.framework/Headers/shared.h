@@ -171,6 +171,7 @@ __attribute__((swift_name("SystemInfo")))
 + (instancetype)new __attribute__((availability(swift, unavailable, message="use object initializers instead")));
 - (NSString *)getDeviceModel __attribute__((swift_name("getDeviceModel()")));
 - (NSString *)getInfo __attribute__((swift_name("getInfo()")));
+- (NSString *)getOsVersion __attribute__((swift_name("getOsVersion()")));
 @end
 
 __attribute__((objc_subclassing_restricted))
