@@ -3,7 +3,7 @@
 A SwiftUI app that uses the Kotlin Multiplatform module `shared` (`import shared`).
 
 ## Where shared comes from
-A prebuilt `Packages/KMPTemplate/shared.xcframework`, attached as a local SPM package (`Package.swift`, `.binaryTarget`). There is no CocoaPods.
+A prebuilt `Packages/KMPTemplate/shared.xcframework`, attached as a local SPM package (`Package.swift`, `.binaryTarget`). shared itself also supports CocoaPods (podspec) for external consumers, but this app connects it via SPM.
 The framework is built in `KMP_template_shared` and copied here by `scripts/propagate.sh` of the `kmp-agents` harness;
 `Packages/KMPTemplate/.shared-rev` records which shared sources it was built from.
 
